@@ -8,3 +8,4 @@ This project is a simple clone of Netflix's core user interface. It is built usi
 - **Movie and TV Show Lists**: Displays lists of movies and TV shows in various categories.
 - **Title and Content Cards**: Provides cards with titles and content for each movie and TV show.
 - **Dynamic Content**: Content is dynamically updated and may include different plans or features.
+-
