@@ -18,5 +18,4 @@ This project is a basic **Netflix clone web application**. Users can log in, lis
 
 ## Screenshots
 
-Below are some screenshots of the application:
-![Screenshot 1](public/img/1.jpg)
+<img src="https://github.com/SNujennDemirr"Netflix-Clone/public/img/2.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
