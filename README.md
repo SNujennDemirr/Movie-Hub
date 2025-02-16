@@ -19,3 +19,4 @@ This project is a basic **Netflix clone web application**. Users can log in, lis
 ## Screenshots
 
 Below are some screenshots of the application:
+
