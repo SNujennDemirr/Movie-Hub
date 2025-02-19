@@ -1,4 +1,4 @@
-# Netflix Clone Web Application
+# Netflix Clone
 
 This project is a basic **Netflix clone web application**. Users can log in, list their favorite movies, view movie details, and explore popular movies. Movie data is retrieved using the **TMDb API**.
 
@@ -19,7 +19,7 @@ This project is a basic **Netflix clone web application**. Users can log in, lis
 ## Screenshots
 
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/1.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/3.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshoot/2.ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
