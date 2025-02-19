@@ -21,9 +21,9 @@ This project is a basic **Netflix clone web application**. Users can log in, lis
 
 <img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshoot/2ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshoot/3ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshoot/4ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/4ss.jpg" alt="Screenshot" style="width: 70%; margin-bottom: 50px;" />
 
