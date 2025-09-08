@@ -6,7 +6,7 @@ const PopularMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null); // Modal için seçilen film
+  const [selectedMovie, setSelectedMovie] = useState(null); 
 
   useEffect(() => {
     const getPopularMovies = async () => {
@@ -25,11 +25,11 @@ const PopularMoviesPage = () => {
   }, []);
 
   const onOpenModal = (movie) => {
-    setSelectedMovie(movie); // Modalı açmak için seçilen filmi state'e kaydediyoruz
+    setSelectedMovie(movie); 
   };
 
   const onCloseModal = () => {
-    setSelectedMovie(null); // Modalı kapatmak için state'i sıfırlıyoruz
+    setSelectedMovie(null); 
   };
 
   if (loading) {

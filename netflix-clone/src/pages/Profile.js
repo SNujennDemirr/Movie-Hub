@@ -8,14 +8,14 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const user = auth.currentUser; // Giriş yapan kullanıcıyı al
+      const user = auth.currentUser; 
       if (user) {
         const userDoc = await firestore.collection('users').doc(user.uid).get();
         if (userDoc.exists) {
-          setUserData(userDoc.data()); // Kullanıcı verilerini al
+          setUserData(userDoc.data()); 
         }
       }
-      setLoading(false); // Yükleme işlemini tamamla
+      setLoading(false); 
     };
 
     fetchUserData();
@@ -24,7 +24,8 @@ const Profile = () => {
   return (
     <div>
       {loading ? (
-        <p>Yükleniyor...</p> // Yükleniyor mesajı
+        <p>Yükleniyor...</p> 
+        
       ) : userData ? (
         <div>
           <h2>Profil Bilgileri</h2>
@@ -34,7 +35,7 @@ const Profile = () => {
           <p>E-posta: {userData.email}</p>
         </div>
       ) : (
-        <p>Kullanıcı bilgileri bulunamadı.</p> // Kullanıcı bilgileri yoksa mesaj
+        <p>Kullanıcı bilgileri bulunamadı.</p> 
       )}
     </div>
   );
