@@ -1,0 +1,254 @@
+/* Genel Sayfa Arka Planı ve Düzeni */
+body {
+  background-color: #141414;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ana Sayfa Düzeni */
+.home-page {
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Karusel ve Film Listesi Düzeni */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+/* Film Kartları Listesi */
+.movie-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0 20px;
+  margin-top: 20px;
+  background-color: #141414;
+}
+
+/* Film Kartı Stili */
+.movie-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 220px;
+  height: 300px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Görseli kapsayan container */
+.movie-card-image-container {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+/* Görsellerin boyutlarını ayarladık */
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Film isminin stilini ayarlıyoruz */
+.movie-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: white;
+  padding: 0 5px;
+}
+
+/* Buton kısmı */
+.movie-card-content {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.movie-card button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.movie-card:hover button {
+  opacity: 1;
+}
+
+/* Modal Stili */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgb(45, 41, 41);
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 600px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Türler arası boşluk ve düzeni sağlamak için */
+.genre-section {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.genre-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Karusel ile film kartları arasındaki boşluk */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+
+/* Auth sayfaları için arka plan resmi */
+.auth-page {
+  background-image: url('https://cgtnturkcom.teimg.com/cgtnturk-com/wp/uploads/2024/01/Netflix.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tam ekran yüksekliği */
+}
+
+.signup-container {
+  background-color: rgba(0, 0, 0, 0.85); /* Koyu arka plan */
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 400px; /* Maksimum genişlik */
+  width: 100%; /* Tam genişlik */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px; /* Ortada hizalama */
+  width: 120px; /* Logo genişliği */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column; /* Dikey düzen */
+}
+
+input,
+select {
+  width: 100%; /* Tam genişlik */
+  padding: 10px;
+  margin: 10px 0; /* Üst ve alt boşluk */
+  border: 1px solid #333; /* Kenar rengi */
+  border-radius: 5px; /* Kenar yuvarlama */
+  background-color: rgba(255, 255, 255, 0.1); /* Şeffaf arka plan */
+  color: white; /* Yazı rengi */
+}
+
+button {
+  background-color: #e50914; /* Netflix kırmızı */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f40612; /* Hover rengi */
+}
+
+.auth-buttons {
+  text-align: center; /* Orta hizalama */
+  margin: 20px 0;
+}
+
+.auth-buttons button {
+  margin: 0 10px; /* Butonlar arasında boşluk */
+  background-color: transparent; /* Arka planı kaldır */
+  border: none;
+  color: #e50914; /* Kırmızı metin */
+  font-size: 1rem; /* Buton yazı boyutu */
+  text-decoration: underline; /* Altı çizili */
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  color: #f40612; /* Hover rengi */
+}
