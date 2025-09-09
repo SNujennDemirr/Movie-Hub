@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_KEY; 
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const fetchMovieGenres = async () => {
@@ -33,6 +33,6 @@ export const fetchPopularMovies = async () => {
   }
 };
 
-// ESLint uyarısı almamak için export'u değiştir
+
 const api = { fetchMovieGenres, fetchMoviesByGenre, fetchPopularMovies };
 export default api;

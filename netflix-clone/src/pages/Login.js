@@ -46,7 +46,7 @@ const Login = () => {
       </form>
     <div className="auth-buttons">
           <p>
-            Hesabın var mı? <button onClick={goToSignup}>kayıtol</button>
+            Hesabın var mı? <button onClick={goToSignup}>giriş yap</button>
           </p>
         </div>
     </div>

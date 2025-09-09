@@ -8,7 +8,7 @@ const MovieDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
-    const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
     const BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const MovieDetail = () => {
                 setMovie(response.data);
                 setLoading(false);
             } catch (err) {
-                console.error("Error fetching movie details:", err);
+                console.error(".. err ", err);
                 setError(true);
                 setLoading(false);
             }
@@ -47,7 +47,7 @@ const MovieDetail = () => {
                     />
                     <p><strong>Release Date:</strong> {movie.release_date}</p>
                     <p><strong>Overview:</strong> {movie.overview}</p>
-                    {/* devamı gelecek .. */}
+                    {/* devamı gelecek . ! .. */}
                 </>
             )}
         </div>

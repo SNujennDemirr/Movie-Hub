@@ -14,7 +14,7 @@ const PopularMoviesPage = () => {
         const popularMovies = await fetchPopularMovies();
         setMovies(popularMovies);
       } catch (error) {
-        console.error('Error fetching popular movies:', error);
+        console.error('....... ', error); // ... 
         setError(true);
       } finally {
         setLoading(false);
@@ -37,7 +37,7 @@ const PopularMoviesPage = () => {
   }
 
   if (error) {
-    return <div>Error loading popular movies. Please try again later.</div>;
+    return <div> .... </div>;
   }
 
   return (
@@ -49,7 +49,7 @@ const PopularMoviesPage = () => {
         ))}
       </div>
 
-      {/* Modal */}
+    
       {selectedMovie && (
         <div className="modal">
           <div className="modal-content">
