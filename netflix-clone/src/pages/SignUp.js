@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { auth, firestore } from '../firebase/firebase'; 
+import { auth, firestore } from '../firebase/firebase'; // Firebase ayarlarınızı buradan içe aktarın
 import { useNavigate } from 'react-router-dom';
-import '../styles/App.css'; 
+import '../styles/App.css'; // CSS dosyanızı içe aktarın
 
 const Signup = () => {
   const [firstName, setFirstName] = useState('');
@@ -61,7 +61,7 @@ const Signup = () => {
           />
           <input
             type="text"
-            placeholder="Soyad"
+            placeholder="Soyadın ne mk "
             onChange={(e) => setLastName(e.target.value)}
             required
           />
