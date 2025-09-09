@@ -20,6 +20,10 @@ const Login = () => {
       setError(error.message);
     }
   };
+ const goToSignup = () => {
+    navigate('/sigunp'); 
+    
+  };
 
   return (
     <div className="auth-page">
@@ -40,7 +44,14 @@ const Login = () => {
         <button type="submit">Giriş Yap</button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
+    <div className="auth-buttons">
+          <p>
+            Hesabın var mı? <button onClick={goToSignup}>kayıtol</button>
+          </p>
+        </div>
     </div>
+    
+    
   );
 };
 

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { auth, firestore } from '../firebase/firebase'; // Firebase ayarlarınızı buradan içe aktarın
+import { auth, db } from '../firebase/firebase'; 
 import { useNavigate } from 'react-router-dom';
-import '../styles/App.css'; // CSS dosyanızı içe aktarın
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import '../styles/App.css'; 
 
 const Signup = () => {
   const [firstName, setFirstName] = useState('');
@@ -19,17 +21,19 @@ const Signup = () => {
     setSuccess(''); 
 
     try {
-      const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+      
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      await firestore.collection('users').doc(user.uid).set({
+    
+      await setDoc(doc(db, "users", user.uid), {
         firstName,
         lastName,
         gender,
         email,
       });
 
-      setSuccess('Kayıt başarılı!');
+      setSuccess('basarıli');
       setTimeout(() => {
         navigate('/home'); 
       }, 1500);
@@ -41,6 +45,7 @@ const Signup = () => {
 
   const goToLogin = () => {
     navigate('/login'); 
+    
   };
 
   return (
@@ -56,16 +61,18 @@ const Signup = () => {
           <input
             type="text"
             placeholder="Ad"
+            value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="Soyadın ne mk "
+            placeholder="Soyad"
+            value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
-          <select onChange={(e) => setGender(e.target.value)} required>
+          <select value={gender} onChange={(e) => setGender(e.target.value)} required>
             <option value="">Cinsiyet Seçin</option>
             <option value="erkek">Erkek</option>
             <option value="kadın">Kadın</option>
@@ -74,19 +81,21 @@ const Signup = () => {
           <input
             type="email"
             placeholder="E-posta"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             type="password"
             placeholder="Şifre"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
           <button type="submit">Kayıt Ol</button>
         </form>
 
-        {error && <p className="error-message">{error}</p>} 
+        {error && <p className=" .. !! ">{error}</p>} 
         {success && <p className="success-message">{success}</p>}
 
         <div className="auth-buttons">
@@ -99,4 +108,4 @@ const Signup = () => {
   );
 };
 
-export default Signup; // Bileşeni dışa aktar
+export default Signup;
