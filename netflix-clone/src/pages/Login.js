@@ -21,7 +21,7 @@ const Login = () => {
     }
   };
  const goToSignup = () => {
-    navigate('/sigunp'); 
+    navigate('/signup'); 
     
   };
 
