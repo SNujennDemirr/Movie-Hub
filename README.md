@@ -20,7 +20,7 @@ This project is a basic **Netflix clone web application**. Users can log in, lis
 
 <img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1.jpg" alt="Screenshot" width="50%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2ss.jpg" alt="Screenshot" width="50%" style="margin-bottom: 30px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2.jpg" alt="Screenshot" width="50%" style="margin-bottom: 30px;" />
 
 <img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3.jpg" alt="Screenshot" width="50%" style="margin-bottom: 30px;" />
 
