@@ -8,7 +8,7 @@ const MovieDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
-  const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+    const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
     const BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const MovieDetail = () => {
                 setMovie(response.data);
                 setLoading(false);
             } catch (err) {
-                console.error(".. err ", err);
+                console.error('Hata:', err);
                 setError(true);
                 setLoading(false);
             }
@@ -28,11 +28,11 @@ const MovieDetail = () => {
     }, [id, API_KEY, BASE_URL]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>Yükleniyor...</div>;
     }
 
     if (error) {
-        return <div>Error loading movie details. Please try again later.</div>;
+        return <div>Film detayları yüklenemedi. Lütfen daha sonra tekrar deneyin.</div>;
     }
 
     return (
@@ -45,9 +45,9 @@ const MovieDetail = () => {
                         alt={movie.title} 
                         className="movie-poster"
                     />
-                    <p><strong>Release Date:</strong> {movie.release_date}</p>
-                    <p><strong>Overview:</strong> {movie.overview}</p>
-                    {/* devamı gelecek . ! .. */}
+                    <p><strong>Vizyon Tarihi:</strong> {movie.release_date}</p>
+                    <p><strong>Özet:</strong> {movie.overview}</p>
+                    {/* Buraya daha fazla detay ekleyebilirsiniz */}
                 </>
             )}
         </div>
