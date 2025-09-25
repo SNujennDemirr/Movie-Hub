@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
-import { auth, db } from '../firebase/firebase'; 
-import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import '../styles/App.css'; 
+"use client";
 
-const Signup = () => {
+import { useState } from 'react';
+import { auth, db } from '../firebase/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import '../styles/App.css';
+
+export default function Signup() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState(''); 
-  const navigate = useNavigate();
+  const [success, setSuccess] = useState('');
+
+  const router = useRouter();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError('');
-    setSuccess(''); 
+    setSuccess('');
 
     try {
-      
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-    
       await setDoc(doc(db, "users", user.uid), {
         firstName,
         lastName,
@@ -33,23 +35,19 @@ const Signup = () => {
         email,
       });
 
-      setSuccess('basarıli');
+      setSuccess('Kayıt başarılı!');
       setTimeout(() => {
-        navigate('/home'); 
+        router.push('/homepage'); // yönlendirme Next.js uyumlu
       }, 1500);
-    } catch (error) {
-      console.error('Kayıt hatası:', error.message);
-      setError(error.message); 
+
+    } catch (err) {
+      console.error('Kayıt hatası:', err.message);
+      setError(err.message);
     }
   };
 
-  const goToLogin = () => {
-    navigate('/login'); 
-    
-  };
-
   return (
-    <div className="auth-page"> 
+    <div className="auth-page">
       <div className="signup-container">
         <img
           src="https://cdn.dribbble.com/users/9378043/screenshots/16832559/netflix__1_.png"
@@ -95,17 +93,18 @@ const Signup = () => {
           <button type="submit">Kayıt Ol</button>
         </form>
 
-        {error && <p className=" .. !! ">{error}</p>} 
-        {success && <p className="success-message">{success}</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {success && <p style={{ color: 'green' }}>{success}</p>}
 
         <div className="auth-buttons">
           <p>
-            Hesabın var mı? <button onClick={goToLogin}>Giriş Yap</button>
+            Hesabın var mı?{" "}
+            <Link href="/login" className="text-blue-600 underline hover:text-blue-800">
+              Giriş Yap
+            </Link>
           </p>
         </div>
       </div>
     </div>
   );
-};
-
-export default Signup;
+}
