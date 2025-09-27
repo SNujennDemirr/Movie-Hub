@@ -1,12 +1,9 @@
-"use client";
-
 import { useState } from 'react';
-import { auth, db } from '../firebase/firebase';
+import { auth, db } from '../../firebase/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import '../styles/App.css';
+import { useNavigate, Link } from 'react-router-dom';
+import styles from './SignUp.module.css';
 
 export default function Signup() {
   const [firstName, setFirstName] = useState('');
@@ -17,7 +14,7 @@ export default function Signup() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -37,7 +34,7 @@ export default function Signup() {
 
       setSuccess('Kayıt başarılı!');
       setTimeout(() => {
-        router.push('/homepage'); // yönlendirme Next.js uyumlu
+        navigate('/home'); 
       }, 1500);
 
     } catch (err) {
@@ -47,20 +44,21 @@ export default function Signup() {
   };
 
   return (
-    <div className="auth-page">
-      <div className="signup-container">
+    <div className={styles.authPage}>
+      <div className={styles.signupContainer}>
         <img
           src="https://cdn.dribbble.com/users/9378043/screenshots/16832559/netflix__1_.png"
           alt="Netflix Logo"
-          className="logo"
+          className={styles.logo}
         />
-        <h1>Kayıt Ol</h1>
-        <form onSubmit={handleSignUp} className="signup-form">
+        <h1 className={styles.title}>Kayıt Ol</h1>
+        <form onSubmit={handleSignUp} className={styles.signupForm}>
           <input
             type="text"
             placeholder="Ad"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            className={styles.inputField}
             required
           />
           <input
@@ -68,9 +66,15 @@ export default function Signup() {
             placeholder="Soyad"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            className={styles.inputField}
             required
           />
-          <select value={gender} onChange={(e) => setGender(e.target.value)} required>
+          <select 
+            value={gender} 
+            onChange={(e) => setGender(e.target.value)} 
+            className={styles.selectField}
+            required
+          >
             <option value="">Cinsiyet Seçin</option>
             <option value="erkek">Erkek</option>
             <option value="kadın">Kadın</option>
@@ -81,6 +85,7 @@ export default function Signup() {
             placeholder="E-posta"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className={styles.inputField}
             required
           />
           <input
@@ -88,18 +93,21 @@ export default function Signup() {
             placeholder="Şifre"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={styles.inputField}
             required
           />
-          <button type="submit">Kayıt Ol</button>
+          <button type="submit" className={styles.signupButton}>
+            Kayıt Ol
+          </button>
         </form>
 
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        {success && <p style={{ color: 'green' }}>{success}</p>}
+        {error && <p className={styles.errorMessage}>{error}</p>}
+        {success && <p className={styles.successMessage}>{success}</p>}
 
-        <div className="auth-buttons">
+        <div className={styles.authButtons}>
           <p>
             Hesabın var mı?{" "}
-            <Link href="/login" className="text-blue-600 underline hover:text-blue-800">
+            <Link to="/login" className={styles.loginLink}>
               Giriş Yap
             </Link>
           </p>

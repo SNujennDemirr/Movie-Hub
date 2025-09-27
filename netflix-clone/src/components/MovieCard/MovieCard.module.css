@@ -1,0 +1,78 @@
+/* MovieCard - Component Specific Styles */
+.movieCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 220px;
+  height: 300px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  cursor: pointer;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.movieCardImageContainer {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.movieCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieTitle {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: white;
+  padding: 0 5px;
+}
+
+.movieCardContent {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.detailsButton {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movieCard:hover .detailsButton {
+  opacity: 1;
+}
+
+.detailsButton:hover {
+  background-color: #f40612;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .movieCard {
+    width: 150px;
+    height: 220px;
+  }
+
+  .movieTitle {
+    font-size: 1rem;
+  }
+}

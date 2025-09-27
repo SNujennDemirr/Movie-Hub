@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from './pages/Home';
 import PopularMoviesPage from './pages/PopularMoviesPage';
 import LoginPage from './pages/Login';
 import SignupPage from './pages/SignUp';
@@ -23,6 +23,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/popular" element={<PopularMoviesPage />} />
           <Route path="/login" element={<LoginPage />} />

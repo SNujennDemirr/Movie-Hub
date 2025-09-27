@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/App.css';
+import styles from './MovieCard.module.css';
 
 const MovieCard = ({ movie, onOpenModal }) => {
   return (
-    <div className="movie-card">
-      <div className="movie-card-image-container">
+    <div className={styles.movieCard}>
+      <div className={styles.movieCardImageContainer}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} 
           alt={movie.title} 
-          className="movie-card-image"
+          className={styles.movieCardImage}
         />
       </div>
-      <h3>{movie.title}</h3> { }
-      <div className="movie-card-content">
-        <button onClick={() => onOpenModal(movie)}>Detaylar</button>
+      <h3 className={styles.movieTitle}>{movie.title}</h3>
+      <div className={styles.movieCardContent}>
+        <button 
+          className={styles.detailsButton} 
+          onClick={() => onOpenModal(movie)}
+        >
+          Detaylar
+        </button>
       </div>
     </div>
   );

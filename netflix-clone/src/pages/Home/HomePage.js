@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { fetchMovieGenres, fetchMoviesByGenre } from '../services/api';
-import MovieCard from '../components/MovieCard';
-import '../styles/App.css';
+import { fetchMovieGenres, fetchMoviesByGenre } from '../../services/api';
+import MovieCard from '../../components/MovieCard';
 
 const HomePage = () => {
   const [moviesByGenre, setMoviesByGenre] = useState([]);

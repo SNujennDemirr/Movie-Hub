@@ -1,6 +1,6 @@
-// Profile.js
+/// Profile.js
 import React, { useEffect, useState } from 'react';
-import { auth, firestore } from '../firebase/firebase';
+import { auth, firestore } from '../../firebase/firebase';
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <div>
       {loading ? (
-        <p>Yükleniyor...</p> 
+        <p>Yükleniyor...</p> //jpg loading  gösterimi  eklenebilir...
         
       ) : userData ? (
         <div>
