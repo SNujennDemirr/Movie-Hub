@@ -1,6 +1,8 @@
 # Netflix Clone
 
-This project is a basic **Netflix clone web application**. Users can log in, list their favorite movies, view movie details, and explore popular movies. Movie data is retrieved using the **TMDb API**.
+This project is a basic **Netflix clone web application** built with **HTML, CSS, and JavaScript** Users can **sign up and log in via Firebase Authentication** (first name, last name, email, and password), save and list favorite movies, view movie details, and explore popular titles.  
+Movie data is retrieved from the **TMDb API**.
+
 
 ## Features
 
