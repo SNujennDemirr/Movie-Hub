@@ -62,8 +62,6 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <h1 style={{ color: 'white' }}>Ana Sayfa</h1>
-
-      {/* Türleri listele */}
       {genres.map(genre => (
         <div key={genre.id} className="genre-section">
           <h2 style={{ color: 'white' }}>{genreTitles[genre.id] || genre.name}</h2>

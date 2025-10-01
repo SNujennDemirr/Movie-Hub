@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <div>
       {loading ? (
-        <p>Yükleniyor...</p> //jpg loading  gösterimi  eklenebilir...
+        <p>Yükleniyor...</p> // loading  gösterimi  eklenebilir...
         
       ) : userData ? (
         <div>
