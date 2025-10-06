@@ -37,11 +37,19 @@ Movie data is fetched from the **TMDb API**.
 ---
 
 ## Screenshots
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1.jpg" alt="Home Page" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3.jpg" alt="Popular List" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/4.jpg" alt="Movie Details" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2.jpg" alt="Favorites" width="70%" style="margin-bottom: 30px;" />
+
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+
+
+
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/4.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+
+
+
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+
