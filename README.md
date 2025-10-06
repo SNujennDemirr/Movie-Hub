@@ -1,33 +1,47 @@
-# Netflix Clone
+# Movie App
 
-This project is a basic **Netflix clone web application** built with **HTML, CSS, and JavaScript** Users can **sign up and log in via Firebase Authentication** (first name, last name, email, and password), save and list favorite movies, view movie details, and explore popular titles.  
-Movie data is retrieved from the **TMDb API**.
+A simple **Netflix-like web application** where users can **sign up and log in using Firebase Authentication**, edit and save their **profile information**, add movies to **favorites**, and browse **popular titles** with detailed movie information.  
+Movie data is fetched from the **TMDb API**.
 
+---
 
 ## Features
 
-- **User Registration & Login (Firebase)**  
-  Register with first name, last name, email, and password, and log in securely.
+- **Sign Up & Login (Firebase Authentication):**  
+  Register with first name, last name, email, and password. Secure login and logout flow.
 
-- **Favorite Movies**: Users can list and save their favorite movies.
-- **Movie List**: Users can view a list of popular movies.
-- **Movie Details**: Users can view detailed information for each movie.
+- **Profile Section:**  
+  - Edit **display name** and **profile photo URL**  
+  - Save profile changes  
+  - Updated data is reflected instantly across the app (e.g., user name in the navbar)
 
-## Requirements
+- **Favorites:**  
+  - Add or remove movies from favorites  
+  - View and manage favorite movies  
+  - Favorites are stored in **Local Storage** and linked to the user's **Firebase UID**
 
-- **Node.js**: Version 16.x or higher.
- **Firebase Authentication** (user accounts)
-- **Axios**: Axios library is used for making API calls.
-- **TMDb API Key**: Movie data is retrieved using the TMDb API. You can obtain your API key by registering on the [TMDb API](https://www.themoviedb.org/) website.
+- **Popular List & Movie Details:**  
+  - Fetch and display **popular movies** from TMDb  
+  - Show detailed information such as overview, genre, and rating
+
+---
+
+## Tech Stack
+
+- **HTML, CSS, JavaScript (ES6+)**
+- **Firebase Web SDK (Authentication)**
+- **Axios** – for API requests
+- **TMDb API** – movie data source
+- **Local Storage**  – stores lightweight user data locally (like favorite movies).
+
+---
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/1.jpg" alt="Home Page" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/3.jpg" alt="Popular List" width="70%" style="margin-bottom: 30px;" />
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/4.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/4.jpg" alt="Movie Details" width="70%" style="margin-bottom: 30px;" />
 
-
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
-
+<img src="https://raw.githubusercontent.com/SNujennDemirr/Netflix-Clone/main/netflix-clone/public/img/screenshot/2.jpg" alt="Favorites" width="70%" style="margin-bottom: 30px;" />

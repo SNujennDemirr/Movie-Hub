@@ -1,7 +1,14 @@
 import axios from 'axios';
 
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-const BASE_URL = 'https://api.themoviedb.org/3';
+const BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
+
+if (!API_KEY) {
+  console.error('TMDB API Key bulunamadı! .env dosyasını kontrol edin.');
+}
+if (!BASE_URL) {
+  console.error('TMDB Base URL bulunamadı! .env dosyasını kontrol edin.');
+}
 
 export const fetchMovieGenres = async () => {
   try {
