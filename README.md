@@ -37,19 +37,19 @@ Movie data is fetched from the **TMDb API**.
 ---
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Movie-Hub/main/netflix-clone/public/img/Screenshot/1.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="./netflix-clone/public/img/Screenshot/1.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
 
 
 
 
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Movie-Hub/main/netflix-clone/public/img/Screenshot/3.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="./netflix-clone/public/img/Screenshot/3.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
 
 
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Movie-Hub/main/netflix-clone/public/img/Screenshot/4.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="./netflix-clone/public/img/Screenshot/4.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
 
 
 
-<img src="https://raw.githubusercontent.com/SNujennDemirr/Movie-Hub/main/netflix-clone/public/img/Screenshot/2.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
+<img src="./netflix-clone/public/img/Screenshot/2.jpg" alt="Screenshot" width="70%" style="margin-bottom: 30px;" />
 
