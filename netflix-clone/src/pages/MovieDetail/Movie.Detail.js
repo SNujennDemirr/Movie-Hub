@@ -47,7 +47,6 @@ const MovieDetail = () => {
                     />
                     <p><strong>Vizyon Tarihi:</strong> {movie.release_date}</p>
                     <p><strong>Özet:</strong> {movie.overview}</p>
-                    {/* Buraya daha fazla detay ekleyebilirsiniz */}
                 </>
             )}
         </div>
